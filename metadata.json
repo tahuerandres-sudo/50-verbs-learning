@@ -1,0 +1,6 @@
+{
+  "name": "English Verb Challenge – 50 Essential Verbs",
+  "description": "Practice and master the 50 most important English verbs for ICFES and IELTS preparation through gamified multiple choice and sentence builder exercises.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
