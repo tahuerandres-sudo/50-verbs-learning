@@ -174,18 +174,18 @@ export const Dashboard: React.FC<DashboardProps> = ({
           <div className="flex justify-between items-start">
             <ShieldCheck className="w-6 h-6 text-indigo-200" />
             <span className="text-[10px] font-black uppercase tracking-widest bg-white/20 text-white px-2.5 py-1 rounded-lg backdrop-blur-xs">
-              Meta Oficial
+              {masteredCount === 50 ? 'Acreditado 100%' : 'Descarga Disponible'}
             </span>
           </div>
 
           <div className="my-3">
             <h2 className="font-bold text-sm sm:text-base leading-tight text-white">
-              Certificado Oficial ICFES & IELTS
+              Certificado & Reporte Oficial
             </h2>
             <p className="text-xs text-indigo-200 mt-1">
               {masteredCount === 50 
-                ? '¡Acreditación completada y lista para descargar!'
-                : 'Domina los 50 verbos para desbloquear tu diploma.'}
+                ? '¡Acreditación total lista para descargar e imprimir!'
+                : `${masteredCount} de 50 verbos aprobados (${Math.round((masteredCount / 50) * 100)}%). Descarga tu certificado con los verbos completados y pendientes.`}
             </p>
           </div>
 
@@ -195,10 +195,10 @@ export const Dashboard: React.FC<DashboardProps> = ({
               soundManager.playClick();
               onOpenCertificate();
             }}
-            className="w-full py-2.5 bg-white hover:bg-indigo-50 text-indigo-700 rounded-xl font-black text-xs uppercase tracking-wider flex items-center justify-center gap-1.5 transition-colors cursor-pointer"
+            className="w-full py-2.5 bg-white hover:bg-indigo-50 text-indigo-700 rounded-xl font-black text-xs uppercase tracking-wider flex items-center justify-center gap-1.5 transition-colors cursor-pointer active:scale-98 shadow-sm"
           >
             <Trophy className="w-3.5 h-3.5 text-amber-500" />
-            <span>{masteredCount === 50 ? 'Ver Diploma Oficial' : 'Vista Previa Diploma'}</span>
+            <span>Descargar / Ver Certificado</span>
           </button>
         </div>
 

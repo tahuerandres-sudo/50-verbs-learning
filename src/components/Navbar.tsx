@@ -104,16 +104,19 @@ export const Navbar: React.FC<NavbarProps> = ({
                   soundManager.playClick();
                   onOpenCertificate();
                 }}
-                title="Ver Certificado de Dominio"
+                title="Descargar Certificado Académico con desglose de verbos"
                 className={`px-3 py-1.5 rounded-xl text-xs font-bold flex items-center gap-1.5 transition-all cursor-pointer ${
                   stats.masteredVerbsCount === 50 
                     ? 'bg-indigo-600 text-white shadow-md shadow-indigo-200 hover:bg-indigo-700'
-                    : 'bg-slate-50 text-slate-700 border border-slate-200 hover:bg-slate-100'
+                    : 'bg-slate-50 text-slate-700 border border-slate-200 hover:bg-slate-100 hover:border-slate-300'
                 }`}
               >
                 <Trophy className="w-3.5 h-3.5 text-amber-500" />
                 <span className="hidden sm:inline">
-                  {stats.masteredVerbsCount === 50 ? 'Certificado ¡Listo!' : 'Certificado'}
+                  {stats.masteredVerbsCount === 50 ? 'Certificado 100%' : 'Certificado'}
+                </span>
+                <span className="text-[10px] font-black px-1.5 py-0.2 rounded-md bg-slate-200/80 text-slate-700">
+                  {stats.masteredVerbsCount}/50
                 </span>
               </button>
 
